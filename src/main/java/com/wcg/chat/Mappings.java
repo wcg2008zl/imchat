@@ -20,7 +20,6 @@ public class Mappings {
     /**
      * 映射groupId到用户列表
      */
-
     private Map<Integer,List<User>> group2UserMapping;
 
     /**
@@ -28,22 +27,11 @@ public class Mappings {
      * 映射用户到组列表
      *
      */
-
-
     private Map<Integer,List<Group>> user2GroupMapping;
 
-    /**
-     * 维护当前系统中活动的聊天用户上下文，通过用户快速找到
-     * */
-    private Map<Integer,SessionContext> sessionContextMap;
 
-    /**
-    * 维护每个组的聊天内容快照
-    * */
 
-    private Map<Integer,List<ChatSnapshot>> groupChatSnapshot;
 
-    private List<SessionContext> sessionContexts;
 
     public Map<Integer, Group> getGroupMapping() {
         return groupMapping;
@@ -79,11 +67,4 @@ public class Mappings {
         this.user2GroupMapping = user2GroupMapping;
     }
 
-    public Map<Integer, SessionContext> getSessionContextMap() {
-        return sessionContextMap;
-    }
-
-    public void setSessionContextMap(Map<Integer, SessionContext> sessionContextMap) {
-        this.sessionContextMap = sessionContextMap;
-    }
 }

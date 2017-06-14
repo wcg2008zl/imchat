@@ -11,6 +11,4 @@ public interface Store {
     public void flushMsg(ChatSnapshot msg);
 
 
-
-
 }
