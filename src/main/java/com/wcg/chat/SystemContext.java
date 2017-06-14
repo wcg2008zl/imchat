@@ -78,7 +78,7 @@ public class SystemContext {
 
     public void removeSessionContext(SessionContext sessionContext) {
 
-        synchronized (sessionContext) {
+        synchronized (sessionLock) {
 
             sessionContexts.remove(sessionContext);
             sessionContextMap.remove(sessionContext.getCurrentUser());
