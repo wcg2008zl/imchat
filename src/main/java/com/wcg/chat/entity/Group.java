@@ -12,4 +12,9 @@ public class Group {
     private String groupName;
 
     private List<User> gropuUsers;
+
+    private boolean isMaster;
+
+
+
 }

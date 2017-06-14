@@ -1,5 +1,7 @@
 package com.wcg.chat.session;
 
+import java.util.List;
+
 import com.wcg.chat.entity.User;
 
 /**
@@ -8,6 +10,33 @@ import com.wcg.chat.entity.User;
 public class SessionContext {
 
     private User currentUser;
+
+    /**
+     *
+     * 当前正在通话的单个对象
+     */
+
+    private List<User> currentChatUsers;
+
+    /**
+     *
+     * 下发的会话token
+     */
+    private String token;
+
+    /**
+     * 会话开始时间;
+     * */
+
+    private long loginTime;
+
+
+    //private Map<Integer,>
+
+
+
+
+
 
 
 
