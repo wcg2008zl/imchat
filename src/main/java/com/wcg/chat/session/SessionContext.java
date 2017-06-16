@@ -33,10 +33,6 @@ public class SessionContext {
     private ChatView chatView;
 
 
-
-
-
-
     public User getCurrentUser() {
         return currentUser;
     }

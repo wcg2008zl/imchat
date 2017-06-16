@@ -63,6 +63,7 @@ public class Mappings {
     }
 
     public void setUser2GroupMapping(
+
         Map<Integer, List<Group>> user2GroupMapping) {
         this.user2GroupMapping = user2GroupMapping;
     }

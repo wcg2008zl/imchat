@@ -9,4 +9,19 @@ public class Msg {
 
     private byte[] content;
 
+    public com.wcg.chat.entity.MsgType getMsgType() {
+        return MsgType;
+    }
+
+    public void setMsgType(com.wcg.chat.entity.MsgType msgType) {
+        MsgType = msgType;
+    }
+
+    public byte[] getContent() {
+        return content;
+    }
+
+    public void setContent(byte[] content) {
+        this.content = content;
+    }
 }

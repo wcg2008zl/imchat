@@ -13,9 +13,10 @@ public interface ChatService {
 
     public void  flushChatMsg(Msg msg);
 
-    public List<ChatSnapshot> readAllUserChatSnapshotByUserId(User user);
+    public List<ChatSnapshot> readAllUserChatSnapshotByUser(User user);
 
     public List<ChatSnapshot> readAllGroupChatSnapshot();
+
 
 
 }

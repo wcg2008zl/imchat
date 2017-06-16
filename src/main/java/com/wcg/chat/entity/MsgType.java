@@ -13,7 +13,11 @@ public enum MsgType {
     P2PFILE(1,3),
     P2GRAW(2,1),
     P2GIMG(2,2),
-    P2GFILE(2,3)
+    P2GFILE(2,3),
+    HARTBEAT(3,0),//心跳
+    LOGIN(3,1),//登录
+    LOGINOUT(3,2)//登出
+
     ;
 
     private int type;
@@ -40,7 +44,7 @@ public enum MsgType {
         this.scope = scope;
     }
 
-    private static Map<Integer,Map<Integer,MsgType>> _CACHE = new HashMap<>(4);
+    private static Map<Integer,Map<Integer,MsgType>> _CACHE = new HashMap<Integer,Map<Integer,MsgType>>(8);
 
 
     static {
@@ -50,7 +54,7 @@ public enum MsgType {
 
             Map<Integer,MsgType> tmpItem = null;
             if((tmpItem = _CACHE.get(item.type))==null) {
-                tmpItem = new HashMap<>(4);
+                tmpItem = new HashMap<Integer, MsgType>(8);
                 _CACHE.put(item.type,tmpItem);
             }
             tmpItem.put(item.scope,item);

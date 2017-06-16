@@ -12,4 +12,9 @@ public interface Server {
 
     public void stop();
 
+
+    public String getLocalIp();
+
+    public int getLocalPort();
+
 }
